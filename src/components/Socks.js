@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-class Socks extends React.Component {
+class Socks extends Component {
 
   constructor(props) {
     super(props);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-class Underwear extends React.Component {
+class Underwear extends Component {
 
   constructor(props) {
     super(props);
