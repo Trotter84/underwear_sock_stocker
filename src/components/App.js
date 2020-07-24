@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Underwear from './Underwear';
+import Socks from './Socks';
+
 class App extends Component {
   render() {
     return(
@@ -9,7 +12,8 @@ class App extends Component {
           <h1>This site works only for mobile</h1>
         </div>
         <div id='mobileVersion'>
-          <h1>Mobile</h1>
+        <Underwear />
+        <Socks />
         </div>
       </>
     )
