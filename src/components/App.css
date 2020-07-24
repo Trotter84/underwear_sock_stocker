@@ -2,7 +2,11 @@
 #desktopVersion {
   display: flex;
   background-color: #0097C9;
-  height: 790px;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
   justify-content: center;
   align-items: center;
 }
