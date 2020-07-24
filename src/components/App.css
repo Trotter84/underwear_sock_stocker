@@ -45,6 +45,13 @@
   background-color: #EF8F00;
 }
 
+.button {
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+  
+}
+
 #topUnderwear {
 
 }
