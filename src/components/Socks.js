@@ -12,21 +12,16 @@ class Socks extends Component {
   }
 
   increment() {
-    this.setState({
-      count: this.state.count + 1
-    });
+    this.setState(state => ({
+      count: state.count + 1
+    }));
   };
 
   decrement() {
-    this.setState({
-      count: this.state.count - 1
-    });
-    if(this.state.count > 0) {
-      return this.state.count - 1;
-    } else{
-      return 0;
-    }
-  };
+    this.setState(state => ({
+      count: state.count > 0 ? state.count - 1 : 0
+    }));
+};
 
   reset() {
     this.setState({
