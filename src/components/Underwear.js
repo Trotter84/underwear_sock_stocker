@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Counter, { useCounter } from './Counter';
+import { useCounter } from './Counter';
 
 
 const Underwear = () => {
