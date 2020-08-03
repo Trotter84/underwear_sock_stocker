@@ -35,8 +35,8 @@ class Underwear extends Component {
         <h1>Underwear</h1>
         <button className='dec button' onClick={(e) => this.decrement(e)}>-</button>
         <button className='inc button' onClick={(e) => this.increment(e)}>+</button>
-        <button className='reset' onClick={(e) => this.reset(e)}>Reset</button>
-        <h1>Current Count: {this.state.count}</h1>
+        <button className='reset button' onClick={(e) => this.reset(e)}>Reset</button>
+        <h1 className='countTotal'>{this.state.count} Underwear</h1>
       </div>
     );
   }

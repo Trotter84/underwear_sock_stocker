@@ -33,6 +33,7 @@
   height: 50%;
   width: 100%;
   position: fixed;
+  align-items: center;
 }
 
 .top {
@@ -49,7 +50,12 @@
   width: 100px;
   height: 50px;
   font-size: 25px;
-  
+  border-radius: 8px;
+}
+
+.countTotal {
+  position: absolute;
+  justify-content: space-between;
 }
 
 #topUnderwear {
