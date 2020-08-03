@@ -5,7 +5,7 @@ import { useCounter } from './Counter';
 
 
 const Socks = () => {
-  const {count, increment, decrement, reset} = useCounter()
+  const {count, increment, decrement, reset} = useCounter('sock-counter')
   return (
     <div className='split bottom' id='bottomSocks'>
       <h1>Socks</h1>
