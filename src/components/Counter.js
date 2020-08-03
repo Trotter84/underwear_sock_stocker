@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 
 const useLocalStorage = (storageKey, initialValue) => {
   const restoredValue = React.useMemo(() => {
@@ -9,7 +9,7 @@ const useLocalStorage = (storageKey, initialValue) => {
       console.warn("failed to load state")
       return initialValue
     }
-  }, [storageKey])
+  }, [storageKey, initialValue])
   const [value, setValue] = useState(restoredValue)
   React.useEffect(() => {
     try {
@@ -34,9 +34,9 @@ const useLocalStorage = (storageKey, initialValue) => {
 
 export const useCounter = (storageKey) => {
   const [count, setCount] = useLocalStorage(storageKey, 0)
-  const increment = () => setCount(c => c + 1)
-  const decrement = () => setCount(c => c > 0 ? c - 1 : 0)
-  const reset = () => setCount(0)
+  const increment = React.useCallback(() => setCount(c => c + 1), [setCount])
+  const decrement = React.useCallback(() => setCount(c => c > 0 ? c - 1 : 0), [setCount])
+  const reset = React.useCallback(() => setCount(0), [setCount])
   React.useEffect(() => {
     const handleKey = (e) => {
       if (["r"].some(k => k === e.key))  {
